@@ -8,7 +8,9 @@ admin.initializeApp({
 });
 var db = admin.database();
 
-var usersRef = db.ref("/private/users/");
+var usersRef = db.ref("/private/users/credentials");
+var usersInfo = db.ref("/private/users/info");
+var companyInfo = db.ref("/private/company/info");
 
 var UserService = {
     authorize: function(user, callback) {
@@ -36,6 +38,25 @@ var UserService = {
             }
         });
     },
+
+    userInfo : function (user,callback) {
+        let userId = user.id;
+
+        usersInfo.child(userId).once("value", function(snap) {
+            let userData = snap.val();
+            callback(null,userData)
+        });
+    },
+
+    companyInfo : function (company_name,callback) {
+
+
+        companyInfo.child(userId).once("value", function(snap) {
+            let companyData = snap.val();
+            callback(null,companyData)
+        });
+    }
+
 
   }
 

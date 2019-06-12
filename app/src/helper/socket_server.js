@@ -14,6 +14,7 @@ module.exports = function() {
 
         socket.on('hello',data => {
             let key = data.company_name
+
             socket.join(key)
             client.incr(key,(error,count)=>{
                 console.log("hehehe",key,count)

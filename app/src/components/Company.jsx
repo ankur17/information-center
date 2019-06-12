@@ -19,13 +19,22 @@ class Company extends Component {
 
 
     componentWillMount(){
-        let url = 'fgKJNjgsb';
+
+        function WindowCloseHanlder(){
+            window.alert('My Window is reloading');
+        }
+        window.onbeforeunload = WindowCloseHanlder;
+
+        let url = '/ajax/company_info';
 
         fetch(url, {
-            method: 'GET',
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
-            }
+            },
+            body : JSON.stringify({
+                company_name : 'inshorts'
+            })
         }).then(result=>{
             console.log("RESULT",result);
             this.setState({
@@ -35,7 +44,12 @@ class Company extends Component {
         })
     }
 
+    handleWindowClose(){
+        alert("Alerted Browser Close");
+    }
+
     componentDidMount(){
+        window.addEventListener('onbeforeunload', this.handleWindowClose);
         emit({
             action_type : "INCREMENT",
             company_name : "inshorts"
@@ -43,19 +57,22 @@ class Company extends Component {
     }
 
 
-    componentWillUnMount(){
+    componentWillUnmount(){
+        window.removeEventListener('onbeforeunload', this.handleWindowClose);
         emit({
             action_type : "DECREMENT",
             company_name : "inshorts"
         })
     }
 
+
+
     render(){
         return (
             <div>
                 <div className="userContainer companyContainer">
                     <div className="nameHeading">
-                        <p>Company Details</p>
+                        <p>Company Detailsss</p>
                     </div>
 
                     <p>Live View: {this.state.live_views} </p>

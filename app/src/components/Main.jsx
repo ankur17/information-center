@@ -13,7 +13,7 @@ class Main extends Component {
     }
 
     componentWillMount(){
-        let url = 'fgKJNjgsb';
+        let url = '/ajax/user_info';
 
         fetch(url, {
             method: 'POST',
