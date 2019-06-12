@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './../styles/main.css';
+import Main from './../components/Main'
+import Company from './../components/Company';
 
 
 function appRouter(){
-    return (
-        <h1>Main Component</h1>
-    )
+    return (<Company/>)
 }
 
 function run() {
