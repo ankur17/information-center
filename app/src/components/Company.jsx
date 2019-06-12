@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {PseudoTable} from './common/PesudoTable'
+import {setup, emit, liveViewsCount, receiveData} from './../helper/socket_client'
 // yaha pe socket add krna hai...
 // add back button
 class Company extends Component {
@@ -7,8 +8,13 @@ class Company extends Component {
         super(props)
         this.state = {
             companyData : {},
-            isDataAvailable : false
+            isDataAvailable : false,
+            live_views : 0
         }
+        setup()
+        receiveData((data)=>this.setState({
+            live_views : data
+        }))
     }
 
 
@@ -29,6 +35,21 @@ class Company extends Component {
         })
     }
 
+    componentDidMount(){
+        emit({
+            action_type : "INCREMENT",
+            company_name : "inshorts"
+        })
+    }
+
+
+    componentWillUnMount(){
+        emit({
+            action_type : "DECREMENT",
+            company_name : "inshorts"
+        })
+    }
+
     render(){
         return (
             <div>
@@ -36,6 +57,8 @@ class Company extends Component {
                     <div className="nameHeading">
                         <p>Company Details</p>
                     </div>
+
+                    <p>Live View: {this.state.live_views} </p>
 
                     {this.state.isDataAvailable? <MicroComponent/> : <h6>Loading..</h6>}
 

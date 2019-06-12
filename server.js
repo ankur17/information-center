@@ -68,3 +68,6 @@ console.log('http://localhost:' + port);
 // client.on('connect', function() {
 //     console.log('Connected to Redis');
 // });
+
+
+require('./app/src/helper/socket_server')();
