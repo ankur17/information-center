@@ -63,7 +63,8 @@ class Login extends Component {
 
     render() {
         return (
-            <div key="login_form">
+            <div key="login_form" className="login_form">
+                <h2>Information Center Login</h2>
                 <div className="formcontainer">
                     <div className="imgcontainer">
                         <img src={avatar} alt="Avatar" className="avatar"/>

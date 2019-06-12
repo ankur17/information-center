@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {PseudoTable} from './common/PesudoTable'
-import {setup, emit, liveViewsCount, receiveData} from './../helper/socket_client'
+import {setup, emit, receiveData} from './../helper/socket_client'
 import { Link } from 'react-router-dom';
 // yaha pe socket add krna hai...
 // add back button
@@ -12,13 +12,32 @@ class Company extends Component {
             isDataAvailable : false,
             live_views : 0
         }
+        // socket connection
         setup()
         receiveData((data)=>this.setState({
             live_views : data
         }))
 
-        this.company_name = this.props.match.params.company_name
         this.fetchData = this.fetchData.bind(this)
+        this.onUnload = this.onUnload.bind(this);
+        this.postForPageView = this.postForPageView.bind(this);
+        this.messageEmitter = this.messageEmitter.bind(this);
+    }
+
+    onUnload(e) {
+        const confirmationMessage = '';
+        this.messageEmitter("DECREMENT");
+        e.preventDefault();
+        e.returnValue = '';
+
+    }
+
+    messageEmitter(action){
+        emit({
+            action_type : action,
+            company_name : this.props.match.params.company_name,
+            id : USER.id
+        })
     }
 
     postForPageView(){
@@ -60,51 +79,39 @@ class Company extends Component {
 
 
     componentWillMount(){
-
-        function WindowCloseHanlder(){
-            window.alert('My Window is reloading');
-        }
-        window.onbeforeunload = WindowCloseHanlder;
-
         this.postForPageView()
         this.fetchData()
     }
 
-    handleWindowClose(){
-        alert("Alerted Browser Close");
-    }
-
     componentDidMount(){
-        window.addEventListener('onbeforeunload', this.handleWindowClose);
-        emit({
-            action_type : "INCREMENT",
-            company_name : this.company_name,
-            id : USER.id
-        })
+
+        window.addEventListener('unload', this.onUnload,false);
+        this.messageEmitter("INCREMENT")
+
     }
 
 
     componentWillUnmount(){
-        window.removeEventListener('onbeforeunload', this.handleWindowClose);
-        emit({
-            action_type : "DECREMENT",
-            company_name : this.company_name,
-            id : USER.id
-        })
+        window.removeEventListener("unload", this.onUnload,false)
     }
 
 
 
     render(){
+        let renderComponent = null;
+        if (this.state.isDataAvailable)
+            renderComponent = <MicroComponent companyData={this.state.companyData} live_views={this.state.live_views} />
+        else
+            renderComponent = <h3>Loading..</h3>
         return (
             <div>
                 <div className="userContainer companyContainer">
                     <div className="nameHeading">
                         <p>Company Details</p>
-                        <Link to="/view"><button>Go Back</button></Link>
+                        <Link to="/view"><button onClick={()=>this.messageEmitter("DECREMENT")}>Go Back</button></Link>
                     </div>
 
-                    {this.state.isDataAvailable? <MicroComponent companyData={this.state.companyData} live_views={this.state.live_views} /> : <h6>Loading..</h6>}
+                    {renderComponent}
 
                 </div>
             </div>

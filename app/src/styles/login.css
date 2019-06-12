@@ -9,6 +9,16 @@
 
 }
 
+.formcontainer p{
+    color: #f44336;
+    text-align: center;
+}
+
+.login_form h2{
+    text-align: center;
+
+}
+
 /* Full-width inputs */
 input[type=text], input[type=password] {
     width: 100%;

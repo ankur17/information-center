@@ -57,17 +57,5 @@ console.log('Your destiny lies on port ' + port);
 console.log('http://localhost:' + port);
 
 // ====================================
-
-//
-// var redis = require('redis');
-// var client = redis.createClient(port, 'localhost', {no_ready_check: true});
-// client.auth('password', function (err) {
-//     if (err) throw err;
-// });
-//
-// client.on('connect', function() {
-//     console.log('Connected to Redis');
-// });
-
-
+// Redis connect
 require('./app/src/helper/socket_server')();

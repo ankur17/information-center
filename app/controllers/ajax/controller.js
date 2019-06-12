@@ -7,7 +7,7 @@ module.exports = {
     },
 
     getUserInfo : function (req,res) {
-        console.log("getUserInfo",req.user)
+
         let user = req.user;
         UserService.userInfo(user,(err,data)=>{
             res.send({

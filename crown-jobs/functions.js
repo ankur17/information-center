@@ -29,8 +29,6 @@ cron.schedule('*/2 * * * *', () => {
             let data = snap.val() || {}
             let size = Object.keys(data).length
             // update the value to company info
-
-            console.log("Updating",company,size)
             companyInfoRef.child(company).update({
                 page_views: size
             })

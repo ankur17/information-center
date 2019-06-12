@@ -5,7 +5,7 @@ module.exports = function(app, passport) {
     app.use('/dist', require('compression')(), express.static(__dirname + '/dist'));
     app.use('/src', express.static(__dirname + '/src', { maxAge: 10000 }));
 
-    // google auth routes
+    // local auth routes
     app.post('/auth/check', passport.authenticate('local',{
         successRedirect: '/view',
         failureRedirect: '/login'})
@@ -37,7 +37,7 @@ module.exports = function(app, passport) {
         }
     });
 
-    app.use('/view', controllers.UIController);
+    app.use('/view',_auth_login, controllers.UIController);
     app.use('/ajax', controllers.AjaxController);
 
     app.get("/health", function(req, res) {
