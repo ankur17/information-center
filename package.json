@@ -1,0 +1,78 @@
+{
+  "name": "information-center",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ankur17/information-center.git"
+  },
+  "dependencies": {
+    "body-parser": "latest",
+    "compression": "^1.6.2",
+    "connect-redis": "^3.2.0",
+    "cookie-parser": "latest",
+    "crypto": "0.0.3",
+    "ejs": "^2.4.1",
+    "es6-promise": "^3.2.1",
+    "express": "latest",
+    "express-session": "latest",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "fetch": "^1.1.0",
+    "firebase": "^3.6.7",
+    "firebase-admin": "^4.2.1",
+    "google-cloud": "^0.56.0",
+    "googleapis": "^20.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^2.6.1",
+    "lodash": "latest",
+    "node-fetch": "^1.7.1",
+    "nodemon": "^1.18.11",
+    "passport": "^0.3.2",
+    "passport-google-oauth": "^1.0.0",
+    "passport-local": "^1.0.0",
+    "react": "^16.8.6",
+    "react-router": "2.6.1",
+    "react-router-dom": "^5.0.0",
+    "redis": "^2.7.1",
+    "request": "^2.65.0",
+    "socket.io": "latest",
+    "socket.io-client": "latest",
+    "superagent": "^3.5.0",
+    "webpack-manifest-plugin": "^1.0.1",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "peerDependencies": {
+    "babel-core": "^6.0.0",
+    "webpack": "1 || ^2.1.0-beta"
+  },
+  "devDependencies": {
+    "babel-core": "^6.7.4",
+    "babel-loader": "^6.2.2",
+    "babel-plugin-import": "^1.4.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.5.0",
+    "browser-sync": "^2.11.2",
+    "css-loader": "^0.23.1",
+    "less-loader": "^2.2.3",
+    "node-sass": "^3.9.3",
+    "react-dom": "latest",
+    "react-hot-loader": "^1.3.0",
+    "sass-loader": "^3.2.3",
+    "style-loader": "^0.13.2",
+    "webpack": "^1.12.13",
+    "webpack-dev-server": "^1.8.2",
+    "webpack-hot-middleware": "^2.7.1",
+    "webpack-stream": "^3.1.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ankur17/information-center/issues"
+  },
+  "homepage": "https://github.com/ankur17/information-center#readme"
+}
