@@ -1,58 +1,42 @@
 {
   "pratilipi" : {
+    "address" : "3rd Floor, Elite building,Bengaluru - 560034",
+    "email" : "contact@pratilipi.com",
+    "founded_in" : 2014,
+    "image" : "https://d1qb2nb5cznatu.cloudfront.net/startups/i/512480-fc55d4ec3a38310f2cdca049f09a4735-medium_jpg.jpg?buster=1525076218",
+    "intro" : "Pratilipi, one of the largest Indian language self-publishing platforms, currently operational in eight Indian languages, is allowing Indian writers to publish content in their own regional language and fostering vernacularism in Indian media",
     "name" : "Pratilipi",
-    "founded_in" : 2014,
-    "intro" : "Pratilipi, one of the largest Indian language self-publishing platforms, currently operational in eight Indian languages, is allowing Indian writers to publish content in their own regional language and fostering vernacularism in Indian media",
-    "address" : {
-      "line1" : "3rd Floor, Elite building, 627/628, 5th Cross, 15th Main, 80 Ft road, Koramangala, 4th Block, Bengaluru - 560034",
-      "line2" : "Bengaluru - 560034"
-    },
-    "contact" : {
-      "email" : "contact@pratilipi.com",
-      "phone" : "080 41710149"
-    },
-    "page_views" : 23
+    "page_view" : 2,
+    "phone" : "080 41710149"
   },
-  "pratilipi_1" : {
-    "name" : "pratilipi_1",
-    "founded_in" : 2014,
-    "intro" : "Pratilipi, one of the largest Indian language self-publishing platforms, currently operational in eight Indian languages, is allowing Indian writers to publish content in their own regional language and fostering vernacularism in Indian media",
-    "address" : {
-      "line1" : "3rd Floor, Elite building, 627/628, 5th Cross, 15th Main, 80 Ft road, Koramangala, 4th Block, Bengaluru - 560034",
-      "line2" : "Bengaluru - 560034"
-    },
-    "contact" : {
-      "email" : "contact@pratilipi.com",
-      "phone" : "080 41710149"
-    },
-    "page_views" : 23
+  "oyo" : {
+    "address" : "India",
+    "email" : "contact@oyorooms.com",
+    "founded_in" : 2013,
+    "image" : "https://upload.wikimedia.org/wikipedia/en/thumb/1/19/OYO_Rooms_%28logo%29.png/240px-OYO_Rooms_%28logo%29.png",
+    "intro" : "We are World's fastest growing hotel chain spread across 800 cities with 23,0000+ hotels offering standardized and hassle-free stay experiences at an unmatched price.",
+    "name" : "Oyo",
+    "page_view" : 2,
+    "phone" : "+91 931 393 1393"
   },
-  "pratilipi_2" : {
-    "name" : "pratilipi_2",
-    "founded_in" : 2014,
-    "intro" : "Pratilipi, one of the largest Indian language self-publishing platforms, currently operational in eight Indian languages, is allowing Indian writers to publish content in their own regional language and fostering vernacularism in Indian media",
-    "address" : {
-      "line1" : "3rd Floor, Elite building, 627/628, 5th Cross, 15th Main, 80 Ft road, Koramangala, 4th Block, Bengaluru - 560034",
-      "line2" : "Bengaluru - 560034"
-    },
-    "contact" : {
-      "email" : "contact@pratilipi.com",
-      "phone" : "080 41710149"
-    },
-    "page_views" : 23
+  "paytm" : {
+    "address" : "Noida, Uttar Pradesh, India",
+    "email" : "contact@paytm.com",
+    "founded_in" : 2010,
+    "image" : "https://upload.wikimedia.org/wikipedia/commons/4/42/Paytm_logo.png",
+    "intro" : "Paytm is an Indian e-commerce payment system and digital wallet company",
+    "name" : "Paytm",
+    "page_view" : 2,
+    "phone" : "+91 120 4456 456"
   },
-  "pratilipi_3" : {
-    "name" : "pratilipi_3",
-    "founded_in" : 2014,
-    "intro" : "Pratilipi, one of the largest Indian language self-publishing platforms, currently operational in eight Indian languages, is allowing Indian writers to publish content in their own regional language and fostering vernacularism in Indian media",
-    "address" : {
-      "line1" : "3rd Floor, Elite building, 627/628, 5th Cross, 15th Main, 80 Ft road, Koramangala, 4th Block, Bengaluru - 560034",
-      "line2" : "Bengaluru - 560034"
-    },
-    "contact" : {
-      "email" : "contact@pratilipi.com",
-      "phone" : "080 41710149"
-    },
-    "page_views" : 23
+  "uber" : {
+    "address" : " San Francisco, California, United States",
+    "email" : "contact@uber.com",
+    "founded_in" : 2009,
+    "image" : "http://t1.gstatic.com/images?q=tbn:ANd9GcSMy0KygIfd3WFFlrITlvBedzZqwfdBt5HKwjR_8JW5ZU4pkxYd",
+    "intro" : "Uber Technologies Inc. is an American multinational transportation network company offering services that include peer-to-peer ridesharing, ride service hailing, food delivery, and a bicycle-sharing system.",
+    "name" : "Uber",
+    "page_view" : 2,
+    "phone" : "+91 931 393 1393"
   }
 }

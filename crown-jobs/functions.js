@@ -5,7 +5,7 @@
 
 var cron = require('node-cron');
 var admin = require("firebase-admin");
-var serviceAccount = require("./keys/firebase-admin-key.json");
+var serviceAccount = require("./key/firebase-admin-key.json");
 
 admin.initializeApp({
     databaseURL: "https://information-center-be32b.firebaseio.com",
@@ -18,7 +18,7 @@ var companyViewsRef = db.ref("/public/company/views");
 var companyInfoRef = db.ref("/public/company/info");
 
 
-const company_names = ["pratilipi","pratilipi_1","pratilipi_2","pratilipi_3"]
+const company_names = ["pratilipi","oyo","paytm","uber"]
 
 
 cron.schedule('*/2 * * * *', () => {
@@ -26,9 +26,11 @@ cron.schedule('*/2 * * * *', () => {
 
     company_names.forEach((company)=>{
         companyViewsRef.child(company).once('value',function(snap){
-            let data = snap.val()
+            let data = snap.val() || {}
             let size = Object.keys(data).length
             // update the value to company info
+
+            console.log("Updating",company,size)
             companyInfoRef.child(company).update({
                 page_views: size
             })

@@ -2,20 +2,26 @@
 
     "e82b057f8dc564e93895b0349da63935" : {
       "id" : "e82b057f8dc564e93895b0349da63935",
-      "nickname" : "anki",
       "username" : "ankurharna",
+      "name" : "Ankur Harna",
+      "nickname" : "ank",
       "gender" : "Male",
       "age"  : 23,
-      "company" : "pratilipi"
+      "company" : "pratilipi",
+      "job_role" : "Fullstack Developer",
+      "image" : "https://scontent.fdel27-1.fna.fbcdn.net/v/t1.0-9/15977204_2192909000934193_3419439762674283179_n.jpg?_nc_cat=103&_nc_oc=AQn8NFlsrm4DqSbowbOv1DTiLmEurYS9jYSvgtrGKeOEvzTnsMZodnqnMbRHZ-exN5g&_nc_ht=scontent.fdel27-1.fna&oh=28bc76104bc7e65cf00d3ca5e4779068&oe=5D80F661"
     },
 
     "f2490ad5cb408a98900fd44c28aefc62" : {
       "id" : "f2490ad5cb408a98900fd44c28aefc62",
-      "nickname" : "Sahil",
       "username" : "sahil@gmail.com",
+      "name" : "Sahil Singh",
+      "nickname" : "Sahil",
       "gender" : "Male",
       "age"  : 23,
-      "company" : "pratilipi_2"
+      "company" : "pratilipi",
+      "job_role" : "Frontend Developer",
+      "image" : "https://scontent.fdel27-1.fna.fbcdn.net/v/t1.0-9/15977204_2192909000934193_3419439762674283179_n.jpg?_nc_cat=103&_nc_oc=AQn8NFlsrm4DqSbowbOv1DTiLmEurYS9jYSvgtrGKeOEvzTnsMZodnqnMbRHZ-exN5g&_nc_ht=scontent.fdel27-1.fna&oh=28bc76104bc7e65cf00d3ca5e4779068&oe=5D80F661"
     }
 
 }
