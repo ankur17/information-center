@@ -11,10 +11,10 @@
       "email" : "contact@pratilipi.com",
       "phone" : "080 41710149"
     },
-    "page_count" : 23
+    "page_views" : 23
   },
   "pratilipi_1" : {
-    "name" : "Pratilipi",
+    "name" : "pratilipi_1",
     "founded_in" : 2014,
     "intro" : "Pratilipi, one of the largest Indian language self-publishing platforms, currently operational in eight Indian languages, is allowing Indian writers to publish content in their own regional language and fostering vernacularism in Indian media",
     "address" : {
@@ -25,10 +25,10 @@
       "email" : "contact@pratilipi.com",
       "phone" : "080 41710149"
     },
-    "page_count" : 23
+    "page_views" : 23
   },
   "pratilipi_2" : {
-    "name" : "Pratilipi",
+    "name" : "pratilipi_2",
     "founded_in" : 2014,
     "intro" : "Pratilipi, one of the largest Indian language self-publishing platforms, currently operational in eight Indian languages, is allowing Indian writers to publish content in their own regional language and fostering vernacularism in Indian media",
     "address" : {
@@ -39,10 +39,10 @@
       "email" : "contact@pratilipi.com",
       "phone" : "080 41710149"
     },
-    "page_count" : 23
+    "page_views" : 23
   },
   "pratilipi_3" : {
-    "name" : "Pratilipi",
+    "name" : "pratilipi_3",
     "founded_in" : 2014,
     "intro" : "Pratilipi, one of the largest Indian language self-publishing platforms, currently operational in eight Indian languages, is allowing Indian writers to publish content in their own regional language and fostering vernacularism in Indian media",
     "address" : {
@@ -53,6 +53,6 @@
       "email" : "contact@pratilipi.com",
       "phone" : "080 41710149"
     },
-    "page_count" : 23
+    "page_views" : 23
   }
 }

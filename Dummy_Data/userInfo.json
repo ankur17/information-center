@@ -1,5 +1,5 @@
 {
-  "user_details" : {
+
     "e82b057f8dc564e93895b0349da63935" : {
       "id" : "e82b057f8dc564e93895b0349da63935",
       "nickname" : "anki",
@@ -17,5 +17,5 @@
       "age"  : 23,
       "company" : "pratilipi_2"
     }
-  }
+
 }
