@@ -1,11 +1,16 @@
 {
-  "users" : {
+  "credentails" : {
     "e82b057f8dc564e93895b0349da63935" : {
-      "id" : "e82b057f8dc564e93895b0349da63935"
+      "id" : "e82b057f8dc564e93895b0349da63935",
       "nickname" : "anki",
       "password" : "ankurharna",
       "username" : "ankurharna"
-    }
-
+    },
+    "f2490ad5cb408a98900fd44c28aefc62" : {
+          "id" : "f2490ad5cb408a98900fd44c28aefc62",
+          "nickname" : "sahil",
+          "password" : "ankur",
+          "username" : "ankur"
+      }
   }
 }
