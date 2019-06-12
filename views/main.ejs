@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Main</title>
+    <%include ./includes/meta.ejs%>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/dist/public/<%=obj['main.css']%>"></link>
+
+  <script>
+  var USER = <%-JSON.stringify(user||{})%>;
+  </script>
+
+  </head>
+  <body>
+    <div id='root'>
+    </div>
+    <!-- <h1>LOGGED IN </h1>
+    <a href='/view/game/pacman'>PACMAN KHELO</a> -->
+
+  <script type="text/javascript" src="/dist/public/<%=obj['main.js']%>"></script>
+
+  </body>
+</html>
