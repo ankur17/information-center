@@ -8,7 +8,7 @@ admin.initializeApp({
 });
 var db = admin.database();
 
-var usersRef = db.ref("/private/credentails/");
+var usersRef = db.ref("/private/users/");
 
 var UserService = {
     authorize: function(user, callback) {

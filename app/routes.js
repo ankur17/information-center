@@ -15,7 +15,11 @@ module.exports = function(app, passport) {
 
 
     app.get('/login', function(req, res) {
-        res.render('login.ejs', { obj: _obj , user:req.user});
+        if (req.isAuthenticated()) {
+            res.redirect('/view');
+        } else {
+            res.render('login.ejs', { obj: _obj , user:req.user});
+        }
     });
 
     app.get('/logout', function(req, res) {
@@ -25,7 +29,7 @@ module.exports = function(app, passport) {
 
 
     app.get('/',(req, res)=>{
-        // res.redirect('/view');
+
         if (req.isAuthenticated()) {
             res.redirect('/view');
         } else {
