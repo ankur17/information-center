@@ -1,17 +1,27 @@
 .userContainer{
     padding-top: 10px;
-    margin: 20px auto;
+    padding-bottom: 20px;
+    margin: 28px auto;
     background-color: bisque;
     width: 60%;
+    min-height : 600px;
     border-radius: 10px;
+    transition : height 2s;
 }
 
 .nameHeading{
-    margin: 20px 0;
+    margin: 10px 0;
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     font-family: Arial;
+}
+
+.nameHeading button{
+    float: right;
+    right : 2%;
+    border-radius: 10px;
+    border: none;
 }
 
 .pesudoRow{
@@ -29,12 +39,43 @@
 
 .right{
     width: 70%;
-    text-align: left;
+    text-align: justify;
+    padding-right: 20px;
     align-self: center;
+}
+
+.horizontalLine{
+    width: 80%;
+    margin: auto;
+    height: 2px;
+    background-color: darkslategray;
+    border-radius: 40px;
 }
 
 
 /*Company Component CSS*/
 .companyContainer{
-    background-color: yellow;
+    background-color: #48e391;
+}
+
+.userImgContainer{
+    display : flex;
+    justify-content: center;
+    width : 100%;
+    margin : auto;
+
+}
+.userImage{
+    margin: 10px auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.userContainer h3{
+    display : flex;
+    justify-content: center;
+    align-items: center;
 }

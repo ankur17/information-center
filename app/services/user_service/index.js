@@ -6,6 +6,7 @@ module.exports = {
 
     companyInfo: service.companyInfo,
     userInfo: service.userInfo,
+    addCompanyViewCount: service.addCompanyViewCount,
 
 
 };

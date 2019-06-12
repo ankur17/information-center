@@ -14,11 +14,17 @@ module.exports = function() {
 
         socket.on('hello',data => {
             let key = data.company_name
-
+            let userId = data.id
             socket.join(key)
-            client.incr(key,(error,count)=>{
+            console.log("Adding Reddis",key,userId);
+            client.sadd(key,userId,(error,count)=>{
                 console.log("hehehe",key,count)
-                io.to(key).emit('stats',count)
+                client.scard(key,(err,view)=>{
+
+                    console.log("YYYYYYYYYYYYYYY",key,err,view)
+
+                    io.to(key).emit('stats',view)
+                })
             })
             console.log("Server received data:",data)
         })

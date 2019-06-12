@@ -3,10 +3,22 @@ import ReactDOM from 'react-dom';
 import './../styles/main.css';
 import Main from './../components/Main'
 import Company from './../components/Company';
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 
+
+function App() {
+    return (<div>
+        {this.props.children}
+    </div>)
+}
 
 function appRouter(){
-    return (<Company/>)
+    return (
+        <Router>
+            <Route path='/view' exact component={Main}/>
+            <Route path='/company/:company_name' component={Company}/>
+        </Router>
+    )
 }
 
 function run() {
