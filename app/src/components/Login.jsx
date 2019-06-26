@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import 'whatwg-fetch'
 import avatar from './../images/img_avatar.png';
 
-console.log(avatar)
+
 class Login extends Component {
     constructor(props) {
         super(props);
@@ -11,17 +11,17 @@ class Login extends Component {
             password : "",
             showWarning : false
         }
-        this.callKaro = this.callKaro.bind(this)
+        this.verify = this.verify.bind(this)
         this.passwordChanged = this.passwordChanged.bind(this)
         this.usernameChanged = this.usernameChanged.bind(this)
 
     }
 
 
-    callKaro(){
+    verify(){
         let url = '/auth/check';
         // let url = '/ajax/authcheck';
-        console.log("CLicked","callKaroji");
+
         fetch(url, {
             method: 'POST',
             headers: {
@@ -33,13 +33,12 @@ class Login extends Component {
                 password: this.state.password,
             })
         }).then(result=>{
-            console.log("RESULT",result);
+
             if( (result.status == 200) && result.ok ){
                 window.location.href = "/view"
             } else {
                 this.setState({
                     username : "",
-                    password : "",
                     showWarning : true
                 })
             }
@@ -79,7 +78,7 @@ class Login extends Component {
                         <label><b>Password</b></label>
                         <input type="password" placeholder="Enter Password" value={this.state.password} onChange={this.passwordChanged}/>
 
-                        <button onClick={this.callKaro}>Login</button>
+                        <button onClick={this.verify}>Login</button>
                     </div>
 
                 </div>

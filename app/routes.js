@@ -46,6 +46,6 @@ module.exports = function(app, passport) {
 
 
     app.get("/*", function(req, res) {
-        res.send("Path doesn't exist");
+        res.sendStatus(404);
     });
 };

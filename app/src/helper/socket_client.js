@@ -4,8 +4,7 @@
 
 import io from 'socket.io-client'
 
-const address = 'http://localhost:9090'
-const socket = io(address)
+const socket = io("/");
 
 
 function setup(){

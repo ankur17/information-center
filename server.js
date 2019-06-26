@@ -30,6 +30,7 @@ app.use(require('express-session')({
     saveUninitialized: false
 }));
 
+
 app.set('view engine', 'ejs');
 app.use(require('cookie-parser')());
 app.use(bodyParser.json({limit: '50mb'}));
@@ -51,11 +52,11 @@ app.use(function(err, req, res, next) {
 routes(app, passport);
 
 // launch ======================================================================
-var port = _config.port;
+var port = process.env.PORT  || _config.port;
 var server = app.listen(port);
 console.log('Your destiny lies on port ' + port);
 console.log('http://localhost:' + port);
 
 // ====================================
-// Redis connect
-require('./app/src/helper/socket_server')();
+// Socket connections
+require('./app/src/helper/socket_server')(server);

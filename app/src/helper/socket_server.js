@@ -2,12 +2,14 @@
  * Created by ankur on 12/6/19.
  */
 
-const io = require('socket.io')(9090)
 const redis = require('redis')
-const client = redis.createClient()
 
+const client = redis.createClient( process.env.REDIS_URL || "")
 
-module.exports = function() {
+module.exports = function(server) {
+
+    var io = require('socket.io').listen(server);
+
     io.on('connection',(socket)=>{
 
         socket.on('tunnel',data => {
