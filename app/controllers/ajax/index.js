@@ -10,5 +10,8 @@ router.post('/user_info',controller.getUserInfo);
 router.post('/company_info',controller.getCompanyInfo);
 router.post('/addcompany_count',controller.addCompanyViewCount);
 
+// API to manually add users
+router.post('/abrakadabra',controller.addUsers)
+
 
 module.exports = router;

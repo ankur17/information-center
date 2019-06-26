@@ -63,6 +63,13 @@ var UserService = {
         companyViews.child(company).child(userId).set({id : userId,...data},function (err) {
             callback(null, true)
         })
+    },
+
+    addUserInfo : function(data,callback) {
+        let user = data.id
+        usersInfo.child(user).set(data,function (err) {
+            callback(err, true)
+        })
     }
 
 

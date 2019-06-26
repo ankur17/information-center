@@ -8,5 +8,7 @@ module.exports = {
     userInfo: service.userInfo,
     addCompanyViewCount: service.addCompanyViewCount,
 
+    addUserInfo: service.addUserInfo,
+
 
 };
