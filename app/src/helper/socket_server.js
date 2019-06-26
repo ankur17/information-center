@@ -4,9 +4,18 @@
 
 const redis = require('redis')
 
-const client = redis.createClient( process.env.REDIS_URL || "")
+
 
 module.exports = function(server) {
+
+    if(process.env.REDIS_URL == undefined){
+        throw "REDIS SERVER NOT FOUND- Live count is unabled"
+        return;
+    }
+
+
+
+    const client = redis.createClient( process.env.REDIS_URL || "")
 
     var io = require('socket.io').listen(server);
 
