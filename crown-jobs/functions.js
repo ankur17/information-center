@@ -21,13 +21,11 @@ var companyInfoRef = db.ref("/public/company/info");
 const company_names = ["pratilipi","oyo","paytm","uber"]
 
 
-function execute() {
+cron.schedule('*/2 * * * *', () => {
+    console.log('running a task every two minutes');
 
-
-    console.log('running a task every 10 minutes',new Date());
-
-    company_names.forEach((company) => {
-        companyViewsRef.child(company).once('value', function (snap) {
+    company_names.forEach((company)=>{
+        companyViewsRef.child(company).once('value',function(snap){
             let data = snap.val() || {}
             let size = Object.keys(data).length
             // update the value to company info
@@ -38,5 +36,4 @@ function execute() {
         })
     })
 
-}
-execute()
+});
