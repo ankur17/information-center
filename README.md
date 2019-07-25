@@ -100,7 +100,7 @@ In redis the set data structure takes O(1) or constant time in adding/deleting m
 
 The firebase DB is correctly *De-Normalised* making it highly scalable. <br>
 
-The approach for evaluating total page count do not require immediate calculation. Thus at the time of high traffic, DB computation for each user will not be incurred. And for the smaller users, the change of counts within 2min min will not be of much noticeable amount. However, there are other approaches that can be taken, but presently is most suited one.
+The present approach for evaluating total page count do not require immediate calculation. Thus at the time of high traffic, DB computation for each user will not be incurred. And for the smaller users, the change of counts within 2min min will not be of much noticeable amount. However, there are other approaches that can be taken, but presently is most suited one.
 
 
 ##### Time management
